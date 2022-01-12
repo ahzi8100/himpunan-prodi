@@ -31,7 +31,7 @@ class hpm extends CI_Model
     {
         return $this->db->get_where('himpunan', ['id_himpunan' => $id_himpunan])->row_array();
     }
-    public function proses_edit_kegiatan() {
+    public function proseseditkegiatan() {
         $data=[
             "id_himpunan" => $this->input->post('id_himpunan'),
             "nama" => $this->input->post('nama'),

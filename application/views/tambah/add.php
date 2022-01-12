@@ -26,7 +26,7 @@
         <br>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Stakeholder</label>
-            <input type="stakeholder" class="form-control" id="stakeholder" name="stakeholder">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <br>
         <div class="input-group mb-3">
@@ -41,17 +41,13 @@
         <br>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Status</label>
-            <input type="status" class="form-control" id="status" name="status">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <br>
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="submit" class="btn btn-primary">Save</button>
-            <button type="cancel" class="btn btn-danger">Cancel</button>
+            <button type="button" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-primary">Cancel</button>
         </div>
 
     </form>
 </div>
-<br>
-<footer class="container-fluid">
-    <p>Footer Text</p>
-</footer>
