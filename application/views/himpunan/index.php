@@ -1,4 +1,3 @@
-
 <body>
 
 
@@ -24,4 +23,6 @@
                 <h4><small>Himpunan</small></h4>
                 <hr>
                 <h2>Kegiatan</h2>
- 
+            </div>
+          </div>
+      </div>

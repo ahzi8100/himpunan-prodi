@@ -46,4 +46,8 @@ class hpm extends CI_Model
         $this->db->where('id_himpunan', $this->input->post('id_himpunan'));
         $this->db->update('himpunan', $data);
     }
+    function proseseditdata($where,$data,$table){
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}
 }
