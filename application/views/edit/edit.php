@@ -1,10 +1,10 @@
-<div class="container-fluid">
-    <h4>Tambah</h4>
+<div class="col-sm-9">
+    <h4>Edit</h4>
 
     <hr>
     <br>
     <form method="POST" action="<?php echo site_url('Home/proseseditkegiatan'); ?>">
-    <input type="hidden" name="id_himpunan" value="<?php echo $himpunan['id_himpunan'] ?>" href="">
+        <input type="hidden" name="id_himpunan" value="<?php echo $himpunan['id_himpunan'] ?>" href="">
         <div class="mb-3">
             <label for="id" class="form-label">ID</label>
             <input type="id" class="form-control" id="id" name="id_himpunan" value="<?php echo $himpunan['id_himpunan'];  ?>">
@@ -46,13 +46,10 @@
         </div>
         <br>
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="submit" class="btn btn-primary">Edit</button>
-            <button type="cancel" class="btn btn-danger">Cancel</button>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <button type="cancel" class="btn btn-danger">Batal</button>
         </div>
 
     </form>
 </div>
 <br>
-<footer class="container-fluid">
-    <p>Footer Text</p>
-</footer>

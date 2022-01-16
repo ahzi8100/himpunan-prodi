@@ -1,6 +1,5 @@
-<div class="container-fluid">
+<div class="col-sm-9">
     <h4>Tambah</h4>
-
     <hr>
     <br>
     <form method="POST" action="<?php echo site_url('Home/proses_tambah_kegiatan'); ?>">
@@ -25,8 +24,8 @@
         </div>
         <br>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Stakeholder</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label class="form-label">Stakeholder</label>
+            <input type="stakeholder" class="form-control" name="stakeholder">
         </div>
         <br>
         <div class="input-group mb-3">
@@ -40,14 +39,15 @@
         </div>
         <br>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Status</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label class="form-label">Status</label>
+            <input type="status" class="form-control" name="status">
         </div>
         <br>
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary">Save</button>
-            <button type="button" class="btn btn-primary">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="reset" class="btn btn-primary">Cancel</button>
         </div>
-
     </form>
+</div>
+</div>
 </div>

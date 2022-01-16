@@ -18,7 +18,6 @@ class hpm extends CI_Model
             "biaya" => $this->input->post('biaya'),
             "lpj" => $this->input->post('lpj'),
             "status" => $this->input->post('status'),
-
         ];
         $this->db->insert('himpunan', $data);
     }
@@ -31,8 +30,9 @@ class hpm extends CI_Model
     {
         return $this->db->get_where('himpunan', ['id_himpunan' => $id_himpunan])->row_array();
     }
-    public function proseseditkegiatan() {
-        $data=[
+    public function proseseditkegiatan()
+    {
+        $data = [
             "id_himpunan" => $this->input->post('id_himpunan'),
             "nama" => $this->input->post('nama'),
             "tanggal" => $this->input->post('tanggal'),
@@ -46,8 +46,9 @@ class hpm extends CI_Model
         $this->db->where('id_himpunan', $this->input->post('id_himpunan'));
         $this->db->update('himpunan', $data);
     }
-    function proseseditdata($where,$data,$table){
-		$this->db->where($where);
-		$this->db->update($table,$data);
-	}
+    function proseseditdata($where, $data, $table)
+    {
+        $this->db->where($where);
+        $this->db->update($table, $data);
+    }
 }
