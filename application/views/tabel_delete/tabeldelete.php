@@ -2,14 +2,7 @@
     <h4><small>Himpunan</small></h4>
     <hr>
     <h2>Kegiatan</h2>
-    <div class="col px-md-5">
-        <a href="<?php echo site_url('Home/tambah_kegiatan'); ?>">
-            <button type="button" class="btn btn-primary plus">
-                <span data-feather="plus"></span>
-                + Tambah
-            </button>
-        </a>
-    </div>
+
     <br>
     <table class="table table-bordered">
         <tr>
@@ -36,8 +29,6 @@
                 <td><?php echo $hp['status']; ?></td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <a class="btn btn-primary" href="<?php echo site_url('Home/detail_kegiatan') ?>/<?php echo $hp['id_himpunan']; ?>" role="button">Detail</a>
-                        <a class="btn btn-primary" href="<?php echo site_url('Home/edit_kegiatan') ?>/<?php echo $hp['id_himpunan']; ?>" role="button">Edit</a>
                         <a class="btn btn-danger" href="<?php echo site_url('Home/deletekegiatan') ?>/<?php echo $hp['id_himpunan']; ?>" role="button">Delete</a>
                     </div>
                 </td>

@@ -25,6 +25,13 @@ class Home extends CI_Controller
         $this->hpm->proses_tambah_kegiatan();
         redirect('Home');
     }
+    public function delete_kegiatan2() {
+        $data['himpunan'] = $this->hpm->semuadata();
+        $this->load->view('himpunan/header');
+        $this->load->view('himpunan/navbar');
+        $this->load->view('tabel_delete/tabeldelete', $data);
+        $this->load->view('himpunan/footer');
+    }
     public function deletekegiatan($id_himpunan)
     {
         $this->hpm->deletekegiatan($id_himpunan);
@@ -36,6 +43,13 @@ class Home extends CI_Controller
         $this->load->view('himpunan/header');
         $this->load->view('himpunan/navbar');
         $this->load->view('edit/edit', $data);
+        $this->load->view('himpunan/footer');
+    }
+    public function edit_kegiatan2 () {
+        $data['himpunan'] = $this->hpm->semuadata();
+        $this->load->view('himpunan/header');
+        $this->load->view('himpunan/navbar');
+        $this->load->view('edit/edit2', $data);
         $this->load->view('himpunan/footer');
     }
     public function proseseditkegiatan($id_himpunan = null)
@@ -71,5 +85,12 @@ class Home extends CI_Controller
 
         $this->hpm->proseseditdata($where, $data, 'himpunan');
         redirect('home');
+    }
+    public function detail_kegiatan ($id_himpunan) {
+        $data['himpunan'] = $this->hpm->ambil_id_himpunan($id_himpunan);
+        $this->load->view('himpunan/header');
+        $this->load->view('himpunan/navbar');
+        $this->load->view('detail/detail', $data);
+        $this->load->view('himpunan/footer');
     }
 }
