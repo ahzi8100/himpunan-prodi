@@ -37,7 +37,11 @@
         <br>
         <div class="input-group mb-3">
             <label class="input-group-text" for="inputGroupFile02">LPJ</label>
-            <input type="" class="form-control" id="inputGroupFile02" name="lpj" value="<?php echo $himpunan['lpj'];  ?>" readonly>
+            <!-- <input type="" class="form-control" id="inputGroupFile02" name="lpj" value="<?php echo $himpunan['lpj'];  ?>" readonly> -->
+            <br>
+            <a href="<?php echo base_url('file/' . $himpunan['lpj']) ?>"><img src="<?php echo base_url('file/' . $himpunan['lpj']) ?>" class="img-fluid" width="200" alt="gambar"></a>
+            <br>
+            <a download href="<?php echo base_url("file/" . $himpunan['lpj']) ?>" class="btn"><i class="fa fa-download"></i> Download</a>
         </div>
         <br>
         <div class="mb-3">

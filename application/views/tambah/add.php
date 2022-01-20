@@ -2,7 +2,7 @@
     <h4>Tambah</h4>
     <hr>
     <br>
-    <form method="POST" action="<?php echo site_url('Home/proses_tambah_kegiatan'); ?>">
+    <form method="POST" action="<?php echo site_url('Home/proses_tambah_kegiatan'); ?>" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="id" class="form-label">ID</label>
             <input type="id" class="form-control" id="id" name="id" required="">

@@ -32,7 +32,9 @@
                 <td><?php echo $hp['waktu']; ?></td>
                 <td><?php echo $hp['stakeholder']; ?></td>
                 <td><?php echo $hp['biaya']; ?></td>
-                <td><button class="btn"><i class="fa fa-download"></i> Download</button></td>
+                <td>
+                    <a href="<?php echo base_url("file/" . $hp['lpj']) ?>" class="btn"><i class="fa fa-download"></i> Download</a>
+                </td>
                 <td><?php echo $hp['status']; ?></td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">

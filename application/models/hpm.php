@@ -9,6 +9,20 @@ class hpm extends CI_Model
     }
     public function proses_tambah_kegiatan()
     {
+        $config['upload_path']          = './file/';
+        $config['allowed_types']        = 'gif|jpg|png|pdf';
+        $config['max_size']             = 1024; // 1mb
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('lpj')) {
+            $error = array('error' => $this->upload->display_errors());
+            print_r($error);
+            die;
+        } else {
+            $nama_file = $this->upload->data('file_name');
+        }
+
         $data = [
             "id_himpunan" => $this->input->post('id'),
             "nama" => $this->input->post('nama_kegiatan'),
@@ -16,7 +30,7 @@ class hpm extends CI_Model
             "waktu" => $this->input->post('waktu'),
             "stakeholder" => $this->input->post('stakeholder'),
             "biaya" => $this->input->post('biaya'),
-            "lpj" => $this->input->post('lpj'),
+            "lpj" => $nama_file,
             "status" => $this->input->post('status'),
         ];
         $this->db->insert('himpunan', $data);
